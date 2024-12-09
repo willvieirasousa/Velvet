@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.imagem-produto {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.conteudo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marca {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.nome-produto {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.descricao-produto {
+    font-size: 14px;
+    color: #777;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.preco-produto {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.preco-original {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.preco-desconto {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.desconto-porcentagem {
+    font-size: 14px;
+    color: #00dac0;
+    font-weight: bold;
+}
+
+.botao-comprar {
+    width: 100%;
+    padding: 10px;
+    background-color: #00dac0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-comprar:hover {
+    background-color: #04b6a1;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .container-geral-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        background-color: #00dac0;
+        padding: 0 30px;
+        margin-bottom: 50px;
+
+        .box-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 80px;
+
+            .logo {
+                width: 100%;
+            }
+        }
+
+        .box-pesquisa {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+
+            input {
+                width: 100%;
+                border: none;
+                padding: 5px;
+                border-radius: 5px 0 0 5px;
+                outline: none;
+            }
+
+            .box-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                background-color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 0 5px 5px 0;
+
+                .icone-icone {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        .box-usuario {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100px;
+            gap: 10px;
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: #fff;
+                font-size: 17px;
+            }
+
+            a:hover {
+                color: black;
+            }
+        }
+
+        .box-carrinho {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+
+            .icone-icone {
+                width: 50px;
+                height: 50px;
+                color: #fff;
+            }
+        }
+    }
+
+    .box-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+
+            a {
+                text-decoration: none;
+                color: #00dac0;
+            }
+
+            a:hover {
+                color: black;
+            }
+        }
+    }
+
+    .menu-hamburger {
+        display: none;
+        position: relative;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1000;
+        display: none;
+    }
+
+    .menu-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .menu-links a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #00dac0;
+    padding: 10px;
+    margin-top: 25px;
+
+    .box-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+
+        .box-title-inp {
+            display: flex;
+            justify-content: flex-start;
+            align-items: start;
+            flex-direction: column;
+            width: 400px;
+            gap: 10px;
+
+            h3 {
+                color: #fff;
+            }
+
+            .box-input {
+                display: flex;
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    height: 30px;
+                    border: none;
+                    outline: none;
+                    background-color: #fff;
+                    padding: 10px;
+                    font-weight: bold;
+                    border-radius: 10px 0 0 10px;
+                }
+
+                button {
+                    background-color: #000;
+                    border: none;
+                    color: #fff;
+                    width: 40px;
+                    height: 30px;
+                    border-radius: 0 10px 10px 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.box-sobre {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 350px;
+
+    .cont-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+
+        h2 {
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #fff;
+        }
+    }
+}
+
+.box-pagamentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    gap: 5px;
+
+    h3 {
+        color: #fff;
+    }
+
+    .image-pag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+
+        .img-cart {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.box-redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+
+    p {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .box-icones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        gap: 20px;
+
+        .icon-icon {
+            width: 30px;
+            height: 30px;
+            color: #fff;
+        }
+
+        .icon-icon:hover {
+            color: #000;
+        }
+    }
+}
